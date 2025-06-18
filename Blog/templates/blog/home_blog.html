@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="home">
+    <section class="boas-vindas fade-in">
+        <h1>Bem-vindo ao Alexandria</h1>
+        <p>Explore um universo de livros recomendados especialmente para você.</p>
+        <a href="{% url 'livro_create' %}" class="botao-livros">Cadastrar Livros</a>
+    </section>
+</main>
+{% endblock %}

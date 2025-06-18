@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="titulo">
+        <div>
+            <h2>Livros</h2>
+            <a href="{% url 'livro_create'%}" class="botao-cadastro">Cadastrar</a>
+        </div>
+    </section>
+    <section>
+        <table>
+            <tr>
+                <th>Nome do livro</th>
+                <th>Nome do Autor</th>
+                <th>Sobrenome do Autor</th>
+            </tr>
+            {% for livro in livro_list %}
+            <tr>
+                <td>{{livro.nome_livro}}</td>
+                <td>{{livro.nome_autor}}</td>
+                <td>{{livro.sobrenome_autor}}</td>
+            <td>
+                <a href="{% url 'livro_update' livro.id %}">Editar</a>
+                <a href="{% url 'livro_excluir' livro.id %}">Excluir</a>
+            </td>
+            </tr>
+            {% endfor  %}
+        </table>  
+    </section>
+{% endblock %}

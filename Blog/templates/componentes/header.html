@@ -1,0 +1,23 @@
+{% load static %}
+<header class="header">
+  <div class="logo">
+    <img src="{% static 'img/logo.png' %}" alt="Logo Alexandria" class="logo-img">
+    {% if request.session.nome_cliente %}
+    <a href="{% url 'home_blog' %}">Alexandria</a>
+    {% else %}
+    <span class="link-bloqueado-titulo">Alexandria</span>
+    {% endif %}
+  </div>
+
+  <nav class="nav-links">
+  {% if request.session.nome_cliente %}
+      <a href="{% url 'lista_livro' %}">Livros</a>
+      <a href="{% url 'livro_create' %}">Registro</a>
+      <p>{{ request.session.nome_cliente }} {{ request.session.sobrenome_cliente }}</p>
+      <a href="{% url 'cliente_sair' %}">Sair</a>
+  {% else %}
+      <span class="link-bloqueado">Livros</span>
+      <span class="link-bloqueado">Registro</span>
+  {% endif %}
+</nav>
+</header>

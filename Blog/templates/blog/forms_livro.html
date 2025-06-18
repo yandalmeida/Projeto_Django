@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Cadastro{% endblock %}
+{% block content %}
+
+<section>
+    <div class="titulo text-center my-4">
+        <h2>Cadastro de Livros</h2>
+    </div>
+</section>
+
+<section class="container">
+    <form method="post" class="p-4 bg-light rounded shadow-sm">
+        {% csrf_token %}
+
+        <!-- Linha 1 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="{{ form.nome_livro.id_for_label }}"><strong>Título do Livro:</strong></label>
+                {{ form.nome_livro }}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.nome_autor.id_for_label }}"><strong>Nome do Autor:</strong></label>
+                {{ form.nome_autor }}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.sobrenome_autor.id_for_label }}"><strong>Sobrenome do Autor:</strong></label>
+                {{ form.sobrenome_autor }}
+            </div>
+        </div>
+
+        <!-- Botão -->
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-dark px-5" type="submit">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

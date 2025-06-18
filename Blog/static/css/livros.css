@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Layout base */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header */
+.header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ccc;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: gray;
+}
+
+.link-bloqueado {
+    color: gray;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;   /* impede clique */
+    text-decoration: none;
+}
+
+.link-bloqueado-titulo {
+    color: gray;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;   /* impede clique */
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
+/* Estilo do nome do cliente */
+.nav-links p {
+    margin: 0;
+    color: #ccc;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Home */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 70vh;
+}
+
+.boas-vindas h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.boas-vindas p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.botao-livros {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.botao-livros a{
+    color: white;
+}
+
+.botao-livros:hover {
+    background-color: gray;
+    color: white;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* forms */
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* Delete */
+
+.sec_del{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Lista */
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+}
+
+.titulo h2 {
+    margin-bottom: 1rem; /* ajustável conforme o espaço desejado */
+}
+
+.botao-cadastro {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cadastro:hover {
+    background-color: gray;
+    color: white;
+}
+
+table {
+    width: 90vw; /* Define a largura da tabela, melhor usar porcentagem ou max-width */
+     /* Limita a largura máxima da tabela */
+    border-collapse: collapse; /* Colapsa as bordas das células */
+    margin: 2rem auto; /* Centraliza a tabela e adiciona margem superior/inferior */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a tabela */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  th, td {
+    width: auto;
+    border: 1px solid #000000; /* Adiciona bordas às células */
+    padding: 0.8rem; /* Adiciona preenchimento interno às células */
+    text-align: center; /* Alinha o texto à esquerda */
+  }
+  
+  td a{
+    display: inline !important;
+    justify-content: center !important;
+    width: auto !important; /* Largura fixa para o "botão" */
+    padding: 0.5rem ;  
+    margin: 1rem;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 0.8rem !important;  /* Tamanho de fonte um pouco maior */
+    text-decoration: none;
+  }
+  
+  th {
+    background-color: #000000; /* Cor de fundo para os cabeçalhos */
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+  }
+
+  /* Login */
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 70vh;
+    background-color: #f8f9fa;
+}
+
+.login-box {
+    background-color: #000;
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.login-box form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.login-box form input:focus {
+    outline: 2px solid #ffcc00;
+    background-color: #111;
+    color: white;
+}
+
+.login-box form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-box form button:hover {
+    background-color: #e6b800;
+}
+
+.mensagem-erro {
+    margin-top: 1rem;
+    background-color: #dc3545;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn-home {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #e6b800;
+}

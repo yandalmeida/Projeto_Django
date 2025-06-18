@@ -1,0 +1,27 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandria</title>
+    <link rel="stylesheet" href="{% static 'css/livros.css' %}">
+
+</head>
+<body>
+    <header>
+        <!-- Encaixe do cabeçalho -->
+       {% include 'componentes/header.html' %}
+    </header>
+    <main>
+    {% block content %} {% endblock %}
+    </main>
+    <footer>
+        {% include 'componentes/footer.html' %}
+    </footer>
+</body>
+</html>
